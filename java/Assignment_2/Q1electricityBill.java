@@ -17,7 +17,7 @@ public class Q1electricityBill {
         if (unit < 100) {
             bill = unit * 5;
             // System.out.println("your Bill : " +bill);
-        } else if (unit > 100 || unit < 200) {
+        } else if (unit > 100 && unit < 200) {
             bill = 100 * 5 + ((unit - 100) * 7);
             // System.out.println("Your bill "+ bill);
 
