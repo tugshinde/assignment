@@ -6,6 +6,7 @@ class Bus {
 public class Q6 {
     public static void main(String [] arg){
         Scanner sc = new Scanner (System.in);
+        
     }
     
 }
