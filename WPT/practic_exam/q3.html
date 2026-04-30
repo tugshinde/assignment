@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Budget Tracker</title>
+    <style>
+        input{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Personal Budget Tracker</h2>
+
+<input type="text" id="desc" placeholder="Description">
+<input type="number" id="amount" placeholder="Amount">
+<button onclick="addExpense()">Add Expense</button>
+
+<ul id="list"></ul>
+
+<h3>Total: ₹<span id="total">0</span></h3>
+
+<script>
+    let expenses = [];
+    let total = 0;
+    function addExpense(){
+        let desc = document.getElementById("desc").value;
+        let price = document.getElementById("amount").value;
+        total = total+ price;
+
+        let list = document.getElementById("list");
+         expense={
+            description : desc,
+            amount : price,
+            date: new Date().toLocaleDateString()
+         };
+         expenses.push(expense);
+         display();
+         document.getElementById("desc").value="";
+         document.getElementById("price").value="";
+
+
+
+    }
+  function  display(){
+        let list = document.getElementById("list");
+        list.innerHTML="";
+        
+
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+            background-color: antiquewhite;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #nav-bar {
+            background-color: black;
+            /* height: 30px; */
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            /* justify-content: space-between; */
+
+
+
+        }
+
+        nav a {
+            color: aliceblue;
+            text-align: center;
+            margin: 10px;
+            font-size: 20px;
+            text-decoration: none;
+            font-weight: bolder;
+            /* align-items: center; */
+        }
+
+        nav a:hover {
+            color: yellowgreen;
+        }
+
+        h1 {
+            color: aliceblue;
+        }
+
+        #container1 {
+           
+            margin: 20px auto;
+            width: 800px;
+            padding: 20px;
+            border-radius: 8px;
+           
+
+            background-color: rgb(86, 66, 105);
+        }
+label{
+    font-size: 20px;
+    font-weight: bolder;
+}
+        form {
+            padding: 10px;
+            display: block;
+        }
+
+        input ,select {
+            /* padding: 10px 0px; */
+            padding: 8px;
+            width: 100%;
+            display: block;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+        input[type="radio"]{
+            width: auto;
+            display: inline;
+            margin-right: 5px;
+        }
+        button{
+            margin-top: 10px;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav id="nav-bar">
+        <span>tushfsfdsfsdar</span>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div id="container1">
+        <form action="#">
+
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter Name " required>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+            <label for="city">Choose city</label>
+            <select name="city" id="city">
+                <option value="city">Latur</option>
+                <option value="city">Mumbai</option>
+                <option value="city">Nashik</option>
+                <option value="city">Pune</option>
+                <option value="city">Nagpur</option>
+
+            </select>
+            <label for="gender">Gender</label>
+            <input type="radio" name="gender" id="male">Male
+            <input type="radio" name="gender" id="female">Female
+            <input type="radio" name="gender" id="other">Other
+            <br>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+
+
+        </form>
+
+    </div>
+    <script>
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #container {
+            background-color: antiquewhite;
+            margin: 20px auto;
+            width: 600px;
+            padding: 20px;
+            margin: auto;
+        }
+
+        input,
+        select {
+            width: 100%;
+            display: block;
+            padding: 5px 0px 10px 0px;
+            margin: 5px 0px 10px 0px;
+        }
+
+        input[type="radio"] {
+            display: inline;
+            width: auto;
+            margin: 10px;
+        }
+
+        #enformation {
+            background-color: antiquewhite;
+            margin: 20px auto;
+            width: 600px;
+            padding: 20px;
+            margin: auto;
+
+        }
+
+        table {
+            width: 100%;
+
+        }
+
+        button {
+            padding: 5px 10px;
+            border: none;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #datatable {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <form action="">
+            <label for="name">Name </label>
+            <input type="text" name="name" id="name" placeholder="Enter Name">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Enter Email">
+
+            <label for="type">Type</label>
+            <input type="text" name="type" id="type" placeholder="Enter type">
+            <label for="gender">Gender</label>
+            <input type="radio" name="gender" id="male">Male
+            <input type="radio" name="gender" id="female">Female
+            <input type="radio" name="gender" id="other">other
+            <br>
+            <select name="shoec" id="shoec">
+                <option value="">Select Shoe</option>
+                <option value="nike">Nike</option>
+                <option value="adidas">Adidas</option>
+                <option value="puma">Puma</option>
+            </select><br>
+            <button type="submit" onclick="adddata(event)">Submit</button>
+            <button type="reset">Reset</button>
+
+        </form>
+    </div>
+    <br>
+    <div id="enformation">
+        <table id="datatable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>type</th>
+                    <!-- <th>gender</th> -->
+                    <th>shoe</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+    </div>
+    <script>
+        function adddata(event) {
+            event.preventDefault();
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let type = document.getElementById("type").value;
+            let shoe = document.getElementById("shoec").value;
+
+            let table = document.getElementById("datatable").getElementsByTagName("tbody")[0];
+            let newRow = table.insertRow();
+            newRow.insertCell(0).innerText = name;
+            newRow.insertCell(1).innerText = email;
+            newRow.insertCell(2).innerText = type;
+            // newRow.insertCell(3).innerText = gender;
+            newRow.insertCell(3).innerText = shoe;
+
+            let deleteCell = newRow.insertCell(4);
+            deleteCell.innerHTML = '<button onclick="deleteRow(this)">Delete</button>';
+
+            // reset form
+            document.querySelector("form").reset();
+
+        } function deleteRow(btn) {
+            let row = btn.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+        }
+    </script>
+</body>
+
+</html>

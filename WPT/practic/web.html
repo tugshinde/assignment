@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f0f8ff;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e9f7ef;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-4">
+
+                <div class="alert alert-primary text-center">
+                    <h4>Weather Application</h4>
+                </div>
+
+                <div class="mb-3">
+                    <label for="city" class="form-label">Enter City</label>
+                    <input type="text" class="form-control" id="city" placeholder="e.g. Mumbai">
+                </div>
+
+                <button class="btn btn-success w-100" onclick="fetchWeather()">Fetch Weather</button>
+
+                <!-- Output -->
+                <div id="result"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function fetchWeather() {
+            try {
+                const city = document.getElementById("city").value;
+
+                if (!city) {
+                    alert("Please enter a city name");
+                    return;
+                }
+
+                const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=4d57a362ba674d92a36143924262704&q=${city}&aqi=no`);
+                const data = await response.json();
+
+                // Display data
+                document.getElementById("result").innerHTML = `
+                    <h5>${data.location.name}, ${data.location.country}</h5>
+                    <p>Temperature: ${data.current.temp_c} °C</p>
+                    <p>Condition: ${data.current.condition.text}</p>
+                    <img src="${data.current.condition.icon}" />
+                `;
+
+            } catch (error) {
+                console.log(error);
+                document.getElementById("result").innerHTML = "Error fetching weather data";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        nav {
+            background-color: blanchedalmond;
+            padding: 1px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        .links a,
+        .links span {
+            margin: 0px 10px;
+            cursor: pointer;
+        }
+
+        .links {
+            position: relative;
+
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 40px;
+            background: white;
+            display: none;
+            border: 1px solid #ccc;
+        }
+
+        .dropdown a {
+            display: block;
+            padding: 5px 10px;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h2>🍕 Pizza Palace</h2>
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="signup.html">Sign Up</a>
+                <a href="signin.html">Sign In</a>
+
+                <span>Menu ▼</span>
+                <div class="dropdown">
+                    <a href="#">Veg Pizza</a>
+                    <a href="#">Non-Veg Pizza</a>
+                    <a href="#">Drinks</a>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+    <main></main>
+    <footer></footer>
+</body>
+
+</html>

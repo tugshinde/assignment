@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registraion form</title>
+    <style>
+        .container {
+
+            width: 800px;
+            background-color: aqua;
+            padding: 10px 20px 20px 10px;
+            margin-left: 500px;
+
+        }
+        input[type="radio"],input[type="checkbox"]{
+width: auto;
+            display: inline;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 32px;
+            font-weight: bolder;
+        }
+
+        body {
+            background-color: antiquewhite;
+        }
+
+        input ,select {
+            padding: 10px auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            font-size: 16px;
+            display: block;
+            display: inline;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Form Tags Demo</h2>
+
+        <form action="#" method="post" autocomplete="on">
+
+            <!-- Text -->
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter name" required>
+
+            <!-- Email -->
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <!-- Password -->
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" minlength="6" required>
+
+            <!-- Number -->
+            <label for="age">Age</label>
+            <input type="number" id="age" min="1" max="100">
+
+            <!-- Date -->
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob">
+
+            <!-- Time -->
+            <label for="time">Time</label>
+            <input type="time" id="time">
+
+            <!-- Radio -->
+            <label>Gender</label>
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female
+            <br>
+
+            <!-- Checkbox -->
+            <label>Skills : </label>
+            <br>
+            <input type="checkbox" name="skill" value="html"> HTML
+            <input type="checkbox" name="skill" value="css"> CSS
+
+            <!-- File -->
+            <label for="file">Upload File</label>
+            <input type="file" id="file">
+
+            <!-- Color -->
+            <label for="color">Pick Color</label>
+            <input type="color" id="color">
+
+            <!-- Range -->
+            <label for="range">Range</label>
+            <input type="range" id="range" min="0" max="10">
+
+            <!-- Select -->
+            <label for="city">City</label>
+            <select id="city">
+                <option value="">Select</option>
+                <option value="pune">Pune</option>
+                <option value="mumbai">Mumbai</option>
+            </select>
+
+            <!-- Textarea -->
+            <label for="msg">Message</label>
+            <textarea id="msg" rows="3" placeholder="Enter message"></textarea>
+
+            <!-- Datalist -->
+            <label for="browser">Browser</label>
+            <input list="browsers" id="browser">
+            <datalist id="browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Edge">
+            </datalist>
+
+            <!-- Fieldset -->
+            <fieldset>
+                <legend>Extra Info</legend>
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" pattern="[0-9]{10}">
+            </fieldset>
+
+            <!-- Buttons -->
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+            <table>
+                <tr>
+                    <th>vaibhva</th>
+                    <th>vaibhva</th>
+                    <th>vaibhva</th>
+                    <th>vaibhva</th>
+                </tr>
+                <tr>
+                    <td>
+                        tushar
+                    </td>
+                    <td>
+                        tushar
+                    </td>
+                    <td>
+                        tushar
+                    </td>
+                    <td>
+                        tushar
+                    </td>
+                    
+                </tr>
+            </table>
+
+        </form>
+    </div>
+
+    <script>
+
+    </script>
+</body>
+
+</html>

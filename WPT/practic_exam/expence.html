@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input,
+        select {
+            display: block;
+            /* padding: 10px 20px 10px 10px; */
+            margin-top: 5px;
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 5px 0px 10px 0px;
+            margin: 5px 0px 10px 0px;
+        }
+
+        form {
+            padding: 20px;
+        }
+
+        input[type="radio"] {
+            display: inline;
+            width: auto;
+            margin: 10px;
+        }
+
+        #container {
+            width: 800px;
+            background-color: antiquewhite;
+            padding: 10px auto;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <form action="">
+            <label for="name">Name </label>
+            <input type="text" name="name" id="name" placeholder="Enter Name">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Enter Email">
+
+            <label for="type">Type</label>
+            <input type="text" name="type" id="type" placeholder="Enter type">
+            <label for="gender">Gender</label>
+            <input type="radio" name="gender" id="male">Male
+            <input type="radio" name="gender" id="female">Female
+            <input type="radio" name="gender" id="other">other
+            <br>
+            <select name="shoec" id="shoec">
+                <option value="">Select Shoe</option>
+                <option value="nike">Nike</option>
+                <option value="adidas">Adidas</option>
+                <option value="puma">Puma</option>
+            </select><br>
+            <button type="submit" onclick="adddata(event)">Submit</button>
+            <button type="reset">Reset</button>
+
+        </form>
+    </div>
+    <br>
+    <div id="enformation">
+        <table id="datatable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>type</th>
+                    <!-- <th>gender</th> -->
+                    <th>shoe</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <script>
+            
+        </script>
+</body>
+
+</html>
